@@ -32,6 +32,10 @@ jobs:
         working-directory: coindash-api
         run: npm test
 
+      - name: Dependency Vulnerability Scan
+        working-directory: coindash-api
+        run: npm audit --audit-level=high
+
   deploy:
     runs-on: ubuntu-latest
     needs: build-test
