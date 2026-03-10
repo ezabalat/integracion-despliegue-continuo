@@ -3,7 +3,6 @@ name: CI - Nivel 2
 on:
   push:
     branches:
-      - main
       - feature/**
   pull_request:
     branches:
