@@ -38,5 +38,10 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     steps:
+      - name: Example using secret
+        run: echo "Secret configured successfully"
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+
       - name: Simulate deployment
         run: echo "Deployment successful 🚀"
